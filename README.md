@@ -1,5 +1,5 @@
 # Bastli LANstack
-LANstack by Bastli is an *interactive seat map and floor plan web application for LAN partys*. It tries to become a full fledged platform for our next LAN parties.
+LANstack by Bastli is an *interactive seat map and floor plan web application for LAN parties*. It tries to become a full fledged platform in the long run.
 
 ![Alt text](/public/lanstack-screenshot.PNG?raw=true "Screenshot of LANstack webinterface.")
 
