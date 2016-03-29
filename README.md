@@ -61,4 +61,4 @@ a pull request is very much appreciated.
 The CSS Framework used is Semantic UI, the map is drawn in Snap.svg, and all the templating is done for now in Meteor Blaze.
 
 ## License
-Copyright (c) 2016 Markus Wegmann (atokulus). Commercial use not allowed. Attribution by mention of this project.
+Copyright (c) 2016 Markus Wegmann (@Atokulus) & Dan Mugioiu (@Killler07). Commercial use not allowed. Attribution by mention of this project.
