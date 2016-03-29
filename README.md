@@ -11,7 +11,7 @@ Ensure you firewall is properly setup and open the webapplication in your browse
 The floorplan can be modified in the JSON blob on top of the file `./client/seatmap.js`. All the sizes are given in meters.
 The background is under `public/map_background.png`.
 
-```
+```javascript
 sitzplan = {
     rotation: 180, // overall rotation
     background: {
