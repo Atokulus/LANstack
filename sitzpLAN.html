@@ -1,0 +1,91 @@
+<head>
+    <title>sitzplan</title>
+
+    <script type="text/javascript" src="snap.svg.js"></script>
+    <script type="text/javascript" src="jquery.svg.pan.zoom.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div class="ui stackable padded grid">
+        <div class="row">
+            <div id="sidebar" class="four wide green column">
+                <h4 class="ui center aligned inverted header">
+                        <i class="game icon"></i> Bastli LANstack
+                </h4>
+                <div id="mode_menu" class="ui two green item menu">
+                    <a data-mode="search" class="item {{#if is_search}}active{{/if}}">Search</a>
+                    <a data-mode="add" class="item {{#unless is_search}}active{{/unless}}">Add Player</a>
+                </div>
+                <div class="ui divider"></div>
+                {{#if is_search}}
+                <div class="ui fluid icon input">
+                    <i class="search icon"></i>
+                    <input id="search" value="{{search}}" type="text" placeholder="Player nickname, Steam ID, seat...">
+                </div>
+                {{else}} {{> player_form}} {{/if}}
+                <div class="ui divider"></div>
+
+                {{#if playerCount }}
+                <div class="players ui segment">
+                    <table class="ui selectable very basic table">
+                        <tbody>
+                            {{#each players}} {{> player}} {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+                {{else}}
+                <h4 class="ui center aligned inverted sub header">no entries</h4> {{/if}}
+
+            </div>
+            <div id="svg_div" class="twelve wide black column">
+                <svg id="svg"></svg>
+            </div>
+        </div>
+    </div>
+</body>
+
+<template name="player_form">
+    <form class="new-player ui form">
+        <div class="ui segment">
+            <div id="playerName" class="field required">
+                <label>Player Name</label>
+                <input type="text" name="playerName" placeholder="Max Muster" autofocus>
+            </div>
+            <div class="field">
+                <label>Steam ID</label>
+                <input type="text" name="steamID" placeholder="Steam Community ID (e.g. Pwn0r 1337)">
+            </div>
+            <div class="field">
+                <label>Games</label>
+                <input type="text" name="games" placeholder="CS:GO, LoL, Landwirtschaftssimulator 2016... ">
+            </div>
+            <div id="seat" class="field required">
+                <label>Seat Nr.</label>
+                <input type="text" name="seat" placeholder="Enter seat code (e.g. B2) or click on map...">
+            </div>
+        </div>
+        <button class="ui inverted fluid button" type="submit">Submit</button>
+    </form>
+</template>
+
+<template name="player">
+    <tr class="player {{#if score}}highlight{{/if}} {{#if isSelected}}selected{{/if}}">
+        <td>
+            <h2 class="seat ui grey header">{{shortIt this.seat 5}}
+            </h2>
+        </td>
+        <td>
+            <div class="content">
+                <div class="header">{{shortIt this.playerName 40}}</div>
+                <div class="description">
+                    <kbd>{{shortIt this.steamID 30}}</kbd>{{#if clientIP}}, {{clientIP}}{{/if}}{{#if games}}
+                    <br>
+                    <i>{{shortIt this.games 256}}</i> {{/if}}
+                </div>
+            </div>
+        </td>
+        <td class="right aligned top aligned"><i class="delete large grey remove icon"></i></td>
+    </tr>
+</template>

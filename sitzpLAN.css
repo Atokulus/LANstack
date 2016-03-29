@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+    background-color: #1b1c1d;
+}
+#sidebar {
+    max-height: 100vh;
+    overflow-y: auto;
+}
+#sidebar .segment.players {
+    overflow-x: auto;
+}
+tr.player td:first-child {
+    padding-left: 10px !important;
+}
+tr.player.highlight {
+    background-color: blanchedalmond;
+}
+.ui.selectable.table tbody tr.player.highlight:hover {
+    background-color: bisque !important;
+}
+tr.player.selected {
+    background-color: aliceblue !important;
+}
+.ui.selectable.table tbody tr.player.selected:hover {
+    background-color: aliceblue !important;
+}
+tr.player.highlight.selected {
+    background-color: aqua !important;
+}
+.ui.selectable.table tbody tr.player.highlight.selected:hover {
+    background-color: aqua !important;
+}
+#svg_div {
+    height: 100vh;
+    padding: 0;
+}
+#svg {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: block;
+}
