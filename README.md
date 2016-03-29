@@ -4,13 +4,15 @@ LANstack by Bastli is an interactive seat map and floor plan webapplication for 
 ![Alt text](/public/lanstack-screenshot.PNG?raw=true "Screenshot of LANstack webinterface.")
 
 ## Setup
-Install Meteor (https://www.meteor.com/install). Clone the repository, <kbd>cd ./LANstack</kbd> into project, and execute 
-<kbd>meteor run</kbd> or <kbd>sudo meteor run --port 80</kbd>. This will install all the required Meteor packages.
-Ensure your firewall is properly setup and open the webapplication in your browser (Google Chrome is supported for now) under 
+1. Install Meteor (https://www.meteor.com/install). 
+2. Clone the repository with <kbd>https://github.com/Atokulus/LANstack.git</kbd>
+3. <kbd>cd into ./LANstack</kbd>
+4. Execute <kbd>meteor run</kbd> or <kbd>sudo meteor run --port 80</kbd>. This will install all the required Meteor packages.
+5. Ensure your firewall is properly setup and open the webapplication in your browser (Google Chrome is supported for now) under 
 `http://localhost:3000` or `http://localhost`.
 
-The floorplan can be modified in the JSON blob on top of the file `./client/seatmap.js`. All the sizes are given in meters.
-The background is under `public/map_background.png`.
+### Customization
+The floorplan can be modified in the JSON blob on top of the file `./client/seatmap.js`. An example is given below with all sizes in meters. The background image is stored under `./public/map_background.png`.
 
 To reset the whole database just run <kbd>meteor reset</kbd> in the project folder. 
 
