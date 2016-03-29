@@ -1,7 +1,7 @@
 # Bastli LANstack
 LANstack by Bastli is an interactive seat map and floor plan webapplication for LAN partys. It tries to become a full fledged platform for our next LAN parties.
 
-![Alt text](/public/lanstack-screenshot.png?raw=true "Screenshot of LANstack webinterface.")
+![Alt text](/public/lanstack-screenshot.PNG?raw=true "Screenshot of LANstack webinterface.")
 
 ## Setup
 Install Meteor (https://www.meteor.com/install). Clone the repository, <kbd>cd ./LANstack</kbd> into project, and execute 
