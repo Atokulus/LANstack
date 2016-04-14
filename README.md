@@ -5,8 +5,8 @@ LANstack by Bastli is an *interactive seat map and floor plan web application fo
 
 ## Setup
 1. Install Meteor (https://www.meteor.com/install). 
-2. Clone the repository with <kbd>https://github.com/Atokulus/LANstack.git</kbd>
-3. <kbd>cd into ./LANstack</kbd>
+2. Clone the repository with <kbd>git clone https://github.com/Atokulus/LANstack.git</kbd>
+3. <kbd>cd ./LANstack</kbd>
 4. Execute <kbd>meteor run</kbd> or <kbd>sudo meteor run --port 80</kbd>. This will install all the required Meteor packages.
 5. Ensure your firewall is properly setup and open the webapplication in your browser (Google Chrome is supported for now) under 
 `http://localhost:3000` or `http://localhost`.
